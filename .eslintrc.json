@@ -1,0 +1,59 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "parser": "@typescript-eslint/parser",
+  "extends": [
+    "next",
+    "next/core-web-vitals",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react/recommended",
+    "prettier",
+    "plugin:prettier/recommended"
+  ],
+  "plugins": ["react", "simple-import-sort", "@typescript-eslint", "prettier"],
+  "rules": {
+    "react-hooks/exhaustive-deps": 0,
+    "simple-import-sort/exports": 0,
+    "no-unused-expressions": "error",
+    "no-console": "warn",
+    "no-unused-vars": "off",
+    "camelcase": "error",
+    "semi": "error",
+    "default-case": "warn",
+    "eqeqeq": "warn",
+    "no-nested-ternary": "error",
+    "no-var": "error",
+    "require-await": "warn",
+    "no-case-declarations": "error",
+    "func-style": ["warn", "expression"],
+    "@typescript-eslint/no-unused-vars": "error",
+    "prettier/prettier": "off",
+    "indent": "off",
+    "react/react-in-jsx-scope": "off",
+    "@typescript-eslint/ban-ts-comment": "off",
+    "prefer-const": "warn",
+    "simple-import-sort/imports": [
+      "error",
+      {
+        "groups": [
+          // Packages `react` related packages come first.
+          ["^react", "^@?\\w"],
+          // Internal packages.
+          ["^(@|components)(/.*|$)"],
+          // Side effect imports.
+          ["^\\u0000"],
+          // Parent imports. Put `..` last.
+          ["^\\.\\.(?!/?$)", "^\\.\\./?$"],
+          // Other relative imports. Put same-folder imports and `.` last.
+          ["^\\./(?=.*/)(?!/?$)", "^\\.(?!/?$)", "^\\./?$"],
+          // Style imports.
+          ["^.+\\.?(css)$"]
+        ]
+      }
+    ]
+  },
+  "reportUnusedDisableDirectives": true
+}
+
