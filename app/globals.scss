@@ -1,0 +1,28 @@
+@import "../styles/variables";
+@import "../styles/functions";
+@import "../styles/mixins";
+@import "../styles/media-queries";
+@import "../styles/theme";
+@import "../styles/typography";
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+:root.light {
+  @include spread-map($theme-map-light);
+}
+:root.dark {
+  @include spread-map($theme-map-dark);
+}
