@@ -1,0 +1,33 @@
+//Colors
+$--theme-primary: --theme-primary;
+$--theme-secondary: --theme-secondary;
+
+$--theme-gray-primary: --theme-gray;
+$--theme-gray-secondary: --theme-gray-dark;
+//Backgrounds colors
+$--theme-background-subtle: --theme-background-subtle;
+//Typography colors
+$--theme-typography-default: --theme-typography-default;
+//Font
+$--font-display: --theme-font-display;
+$--font-body: --theme-font-body;
+
+// Default theme
+$theme-map-light: (
+  $--theme-primary: #86c232,
+  $--theme-secondary: #61892f,
+  $--theme-gray-primary: #474b4f,
+  $--theme-gray-secondary: #1f2833,
+  $--theme-background-subtle: #f9f9f9,
+  $--theme-typography-default: #0b0c10,
+);
+
+// Dark theme
+$theme-map-dark: (
+  $--theme-primary: #86c232,
+  $--theme-secondary: #61892f,
+  $--theme-gray-primary: #474b4f,
+  $--theme-gray-secondary: #1f2833,
+  $--theme-background-subtle: #f9f9f9,
+  $--theme-typography-default: #0b0c10,
+);

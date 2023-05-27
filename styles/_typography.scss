@@ -1,0 +1,174 @@
+@mixin titleWithLine {
+  position: relative;
+  padding-left: 80px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  text-align: left;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    height: 3px;
+    width: 50px;
+    background-color: useThemeVariable($--theme-primary);
+    @include respond-below(md) {
+      display: none;
+    }
+  }
+  @include respond-below(md) {
+    padding-left: 0;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}
+
+@mixin primaryTitle {
+  position: relative;
+  text-align: left;
+  margin-top: 35px;
+  margin-bottom: 50px;
+  &--authorIncluded {
+    margin-bottom: 10px;
+  }
+  @include respond-below(md) {
+    padding-left: 0;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    &--authorIncluded {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+@mixin secondaryTitle {
+  @include titleWithLine;
+}
+
+@mixin thirdTitle {
+  font-family: useThemeVariable($--font-body);
+  font-weight: 500;
+  letter-spacing: 1px;
+  position: relative;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  text-align: left;
+  @include respond-below(md) {
+    padding-left: 0;
+    margin-top: 30px;
+    margin-bottom: 10px;
+  }
+}
+
+@mixin fourthTitle {
+  font-family: useThemeVariable($--font-body);
+  font-weight: 500;
+  letter-spacing: toRem(1);
+  position: relative;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  text-align: left;
+
+  @include respond-below(md) {
+    padding-left: 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}
+
+h1,
+.h1 {
+  font-size: toREm(36);
+  line-height: toREm(42);
+  font-weight: 400;
+  font-family: useThemeVariable($--font-display);
+  letter-spacing: toRem(2);
+
+  @include respond-below(sm) {
+    font-size: toRem(28);
+    line-height: toRem(36);
+  }
+}
+
+h2,
+.h2 {
+  font-size: toRem(27);
+  line-height: toRem(32);
+  font-weight: 400;
+  margin: 0;
+  font-family: useThemeVariable($--font-display);
+  letter-spacing: toRem(2);
+
+  @include respond-below(sm) {
+    font-size: toRem(22);
+    line-height: toRem(28);
+  }
+
+  &--line {
+    @include secondaryTitle;
+  }
+}
+
+h3,
+.h3 {
+  font-size: toRem(22);
+  line-height: toRem(28);
+  font-weight: 400;
+  margin: 0;
+  font-family: useThemeVariable($--font-body);
+  letter-spacing: toRem(1);
+
+  @include respond-below(sm) {
+    font-size: toRem(18);
+    line-height: toRem(24);
+  }
+}
+
+h4,
+.h4 {
+  font-size: toRem(18);
+  line-height: toRem(21);
+  font-weight: 400;
+  margin: 0;
+  font-family: useThemeVariable($--font-body);
+
+  @include respond-below(sm) {
+    font-size: toRem(16);
+    line-height: toRem(22);
+  }
+}
+
+body {
+  font-size: toRem(16);
+  line-height: toRem(28);
+  font-weight: 300;
+  font-family: useThemeVariable($--font-body);
+  color: useThemeVariable($--theme-typography-default);
+
+  @include respond-below(md) {
+    font-size: toRem(14);
+  }
+}
+
+a {
+  font-family: useThemeVariable($--font-display);
+  font-weight: 300;
+  text-decoration: none;
+  display: inline-block;
+  color: useThemeVariable($--theme-typography-default);
+  transition: all 0.2s ease-out;
+}
+
+.remote-text {
+  h2 {
+    @include titleWithLine;
+  }
+  h3 {
+    @include thirdTitle;
+  }
+  h4 {
+    @include fourthTitle;
+  }
+}
