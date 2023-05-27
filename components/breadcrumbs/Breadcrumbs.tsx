@@ -53,15 +53,17 @@ export const Breadcrumbs = ({
 
   return (
     <div className={clsx("breadcrumbs", className)}>
-      {breadcrumbs.map((crumb, idx) => (
-        <Crumb
-          {...crumb}
-          key={idx}
-          first={idx === 0}
-          last={idx === breadcrumbs.length - 1}
-          currentPageTitle={currentPageTitle}
-        />
-      ))}
+      <div className="breadcrumbs__content">
+        {breadcrumbs.map((crumb, idx) => (
+          <Crumb
+            {...crumb}
+            key={idx}
+            first={idx === 0}
+            last={idx === breadcrumbs.length - 1}
+            currentPageTitle={currentPageTitle}
+          />
+        ))}
+      </div>
     </div>
   );
 };
@@ -90,16 +92,16 @@ const Crumb = ({
   if (last) {
     return (
       <>
-        <span>{">"}</span>
-        <p className="breadcrumbs__crumb--last">{currentPageTitle ?? text}</p>
+        <span className="breadcrumbs__divider">{">"}</span>
+        <p className="breadcrumbs__crumb breadcrumbs__crumb--last">{currentPageTitle ?? text}</p>
       </>
     );
   }
 
   return (
     <>
-      <span>{">"}</span>
-      <Link className="breadcrumbs__crumb--middle" href={href}>
+      <span className="breadcrumbs__divider">{">"}</span>
+      <Link className="breadcrumbs__crumb breadcrumbs__crumb--middle" href={href}>
         {text}
       </Link>
     </>

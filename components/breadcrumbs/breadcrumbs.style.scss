@@ -1,16 +1,55 @@
+@import "styles/variables";
+@import "styles/media-queries";
+@import "styles/functions";
+
 .breadcrumbs {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: flex-end;
+  position: relative;
+  margin-top: 35px;
+  @include respond-below(lg) {
+    margin-top: 95px;
+  }
+
+  &__content {
+    z-index: 1;
+    padding: 0 1rem;
+    background-color: useThemeVariable($--theme-gray-secondary);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  &__divider {
+    color: white;
+    font-size: toRem(12);
+    margin-bottom: 1px;
+  }
 
   &__crumb {
-    margin-right: 8px;
+    margin: 5px;
+    padding: 10px 1px;
+    font-weight: 500;
+    font-size: toRem(14);
+    line-height: toRem(17);
+    color: white;
+    letter-spacing: toRem(1);
+    font-family: useThemeVariable($--font-display);
+
     &--last {
-      margin-left: 8px;
+      color: useThemeVariable($--theme-primary);
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      max-width: 165px;
+      display: block;
+      overflow: hidden;
+      @include respond-below(sm) {
+        max-width: 120px;
+      }
     }
     &--middle {
-      margin: 0 8px;
     }
   }
 }
