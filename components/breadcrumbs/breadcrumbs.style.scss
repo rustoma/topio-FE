@@ -1,0 +1,16 @@
+.breadcrumbs {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+
+  &__crumb {
+    margin-right: 8px;
+    &--last {
+      margin-left: 8px;
+    }
+    &--middle {
+      margin: 0 8px;
+    }
+  }
+}

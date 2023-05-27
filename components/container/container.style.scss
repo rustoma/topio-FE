@@ -1,0 +1,36 @@
+@import "styles/media-queries";
+
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  position: relative;
+
+  @include respond-above(sm) {
+    max-width: 540px;
+  }
+  @include respond-above(md) {
+    max-width: 720px;
+  }
+  @include respond-above(lg) {
+    max-width: 960px;
+  }
+  @include respond-above(xl) {
+    max-width: 1140px;
+  }
+  @include respond-above(2xl) {
+    max-width: 1320px;
+  }
+
+  &--small {
+    padding-left: 0;
+    padding-right: 0;
+
+    @include respond-above(2xl) {
+      max-width: 1000px;
+      padding-right: 20px;
+    }
+  }
+}
