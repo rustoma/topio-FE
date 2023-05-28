@@ -1,3 +1,5 @@
+"use client";
+
 import { createContext, ReactNode, useState } from "react";
 import React from "react";
 import debounce from "lodash.debounce";
