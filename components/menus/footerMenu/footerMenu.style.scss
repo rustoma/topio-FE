@@ -1,0 +1,46 @@
+@import "styles/variables";
+@import "styles/media-queries";
+@import "styles/functions";
+
+.footer-menu {
+  &__title {
+    font-weight: normal;
+    font-size: toRem(18);
+    line-height: toRem(24);
+    letter-spacing: toRem(1);
+    font-family: useThemeVariable($--font-display);
+    text-transform: uppercase;
+
+    @include respond-below(md) {
+      margin: 5px 0;
+    }
+  }
+
+  &__list {
+    padding: 0;
+  }
+
+  &__list-item {
+    padding: 0;
+    list-style: none;
+  }
+
+  &__footer-menu__link {
+    color: white;
+    font-weight: normal;
+    font-size: toRem(16);
+    line-height: toRem(24);
+    letter-spacing: toRem(1);
+    font-family: useThemeVariable($--font-body);
+    margin: 7px 0;
+    &:hover {
+      color: useThemeVariable($--theme-primary);
+    }
+
+    @include respond-below(md) {
+      font-size: toRem(14);
+      line-height: toRem(21);
+      margin: 5px 0;
+    }
+  }
+}

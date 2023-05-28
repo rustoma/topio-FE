@@ -1,0 +1,79 @@
+@import "styles/variables";
+@import "styles/media-queries";
+@import "styles/functions";
+
+.main-footer {
+  margin-top: 150px;
+  padding: 80px 0 0;
+  color: white;
+  background: linear-gradient(180deg, #6b6e70 0%, #474b4f 100%);
+
+  @include respond-below(md) {
+    margin-top: 80px;
+    padding: 30px 0 0;
+  }
+
+  &__content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  &__column {
+    width: 25%;
+    @include respond-below(lg) {
+      width: 30%;
+    }
+
+    @include respond-below(md) {
+      width: 100%;
+    }
+  }
+  &__paragraph {
+    font-weight: 300;
+    font-size: toRem(14);
+    line-height: toRem(24);
+    text-align: justify;
+  }
+
+  &__design-by {
+    margin-top: 50px;
+    text-align: right;
+  }
+
+  &__design-by-label {
+    position: relative;
+    margin: 0;
+    font-size: toRem(18);
+    font-family: useThemeVariable($--font-display);
+    color: white;
+    display: inline-block;
+    padding: 0 20px 15px 0;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background-color: useThemeVariable($--theme-secondary);
+    }
+  }
+
+  &__design-by-label-suffix {
+    display: inline-block;
+    color: useThemeVariable($--theme-typography-default);
+    background-color: white;
+    border-radius: 50%;
+    padding: 15px 10px;
+    margin-left: 3px;
+    line-height: 18px;
+  }
+
+  &__rights {
+    margin: 80px 0 0;
+    padding-bottom: 10px;
+  }
+}
