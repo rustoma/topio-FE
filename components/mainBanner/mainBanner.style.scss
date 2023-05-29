@@ -1,0 +1,65 @@
+@import "styles/variables";
+@import "styles/media-queries";
+@import "styles/functions";
+
+.main-banner {
+  display: flex;
+  align-items: center;
+  height: 650px;
+  position: relative;
+  @include respond-below(md) {
+    height: 500px;
+  }
+  @include respond-below(sm) {
+    height: 450px;
+  }
+
+  &__container {
+    z-index: 1;
+  }
+
+  &__content {
+    max-width: 600px;
+    text-align: center;
+    margin-top: 60px;
+  }
+
+  &__title {
+    margin: 15px 0 10px;
+    color: white;
+    font-size: toRem(72);
+    line-height: toRem(82);
+    @include respond-below(md) {
+      font-size: toRem(52);
+      line-height: toRem(62);
+    }
+    @include respond-below(sm) {
+      font-size: toRem(28);
+      line-height: toRem(36);
+    }
+  }
+
+  &__subtitle {
+    margin: 0;
+    font-weight: bold;
+    font-size: toRem(28);
+    line-height: toRem(35);
+    color: useThemeVariable($--theme-primary);
+    letter-spacing: toRem(3);
+    @include respond-below(sm) {
+      font-size: toRem(21);
+      line-height: toRem(32);
+    }
+  }
+
+  &__body {
+    margin: 0 auto;
+    color: useThemeVariable($--theme-gray-primary);
+    line-height: 21px;
+    max-width: 80%;
+  }
+
+  &__image {
+    z-index: -1;
+  }
+}
