@@ -11,6 +11,8 @@ $--theme-typography-default: --theme-typography-default;
 //Font
 $--font-display: --theme-font-display;
 $--font-body: --theme-font-body;
+//Borders
+$--theme-border-subtle: --theme-border-subtle;
 
 // Default theme
 $theme-map-light: (
@@ -20,6 +22,7 @@ $theme-map-light: (
   $--theme-gray-secondary: #1f2833,
   $--theme-background-subtle: #f9f9f9,
   $--theme-typography-default: #0b0c10,
+  $--theme-border-subtle: #e5e5e5,
 );
 
 // Dark theme
@@ -30,4 +33,5 @@ $theme-map-dark: (
   $--theme-gray-secondary: #1f2833,
   $--theme-background-subtle: #f9f9f9,
   $--theme-typography-default: #0b0c10,
+  $--theme-border-subtle: #e5e5e5,
 );
