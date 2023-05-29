@@ -1,6 +1,5 @@
 import React, { ReactNode } from "react";
-// eslint-disable-next-line
-import { Bebas_Neue,Oxygen } from "next/font/google";
+import { Bebas_Neue, Oxygen } from "next/font/google"; // eslint-disable-line
 
 import { Footer } from "@/components/layout/footer/Footer";
 import { Header } from "@/components/layout/header/Header";
