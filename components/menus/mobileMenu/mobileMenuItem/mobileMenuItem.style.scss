@@ -1,0 +1,47 @@
+@import "styles/variables";
+@import "styles/media-queries";
+@import "styles/functions";
+
+.mobile-menu {
+  &__item {
+    margin-top: 8px;
+    list-style: none;
+
+    &--with-children {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__link {
+    display: inline-block;
+    width: calc(100% - 40px);
+    font-family: var(--theme-font-display);
+
+    &--active {
+      color: useThemeVariable($--theme-primary);
+    }
+  }
+
+  &__link-icon-wrapper {
+    display: flex;
+    width: 40px;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  &__link-icon-holder {
+    display: flex;
+    align-items: center;
+    width: 16px;
+    height: 16px;
+  }
+
+  &__link-icon {
+    fill: currentColor;
+    color: transparent;
+    stroke: useThemeVariable($--theme-typography-default);
+  }
+}

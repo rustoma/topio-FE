@@ -1,0 +1,40 @@
+@import "styles/variables";
+@import "styles/media-queries";
+@import "styles/functions";
+
+.hamburger-menu {
+  position: fixed;
+  z-index: 1000;
+  top: 10px;
+  right: 10px;
+  height: 0;
+  width: 0;
+  transition: all 0.4s ease-out;
+
+  @include respond-above(lg) {
+    display: none;
+  }
+
+  &--open {
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 256px;
+    background: useThemeVariable($--theme-background-subtle);
+    overflow-y: auto;
+    transition: all 0.3s ease-out;
+    transition-delay: 0.5s;
+  }
+
+  &__navigation {
+    position: relative;
+    margin-top: 48px;
+    visibility: hidden;
+
+    &--open {
+      visibility: visible;
+      display: block;
+      padding: 0 20px;
+    }
+  }
+}

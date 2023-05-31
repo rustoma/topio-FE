@@ -1,0 +1,56 @@
+@import "styles/variables";
+@import "styles/media-queries";
+@import "styles/functions";
+
+.hamburger-menu {
+  &__button {
+    position: fixed;
+    right: 20px;
+    top: 10px;
+    z-index: 50;
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+    background: white;
+    transition: all 0.4s ease-in-out;
+    &--open {
+      right: 0;
+      top: 0;
+    }
+  }
+
+  &__button-line-wrapper {
+    position: relative;
+    top: 50%;
+    margin: 0 auto;
+    height: 8px;
+    width: 18px;
+    transform: translateY(-50%);
+  }
+
+  &__button-line {
+    position: relative;
+    display: block;
+    height: 1px;
+    width: 100%;
+    background: useThemeVariable($--theme-typography-default);
+    transition: all 0.4s;
+
+    &--open {
+      transition: all 0.4s ease-in-out;
+      transition-delay: 200ms;
+    }
+
+    &--open-first {
+      transform: translateY(4px) rotate(135deg);
+    }
+    &--open-second {
+      transform: translateY(3px) rotate(-135deg);
+    }
+
+    &--second {
+      transform: translateY(6px);
+    }
+  }
+}
