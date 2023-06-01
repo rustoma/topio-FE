@@ -6,6 +6,7 @@ $--theme-gray-primary: --theme-gray;
 $--theme-gray-secondary: --theme-gray-dark;
 //Backgrounds colors
 $--theme-background-subtle: --theme-background-subtle;
+$--theme-background-primary-header: --theme-background-primary-header;
 //Typography colors
 $--theme-typography-default: --theme-typography-default;
 //Font
@@ -16,11 +17,12 @@ $--theme-border-subtle: --theme-border-subtle;
 
 // Default theme
 $theme-map-light: (
-  $--theme-primary: #86c232,
-  $--theme-secondary: #61892f,
+  $--theme-primary: #9a208c,
+  $--theme-secondary: #aa77ff,
   $--theme-gray-primary: #474b4f,
   $--theme-gray-secondary: #1f2833,
   $--theme-background-subtle: #f9f9f9,
+  $--theme-background-primary-header: rgba(170, 119, 255, 0.5),
   $--theme-typography-default: #0b0c10,
   $--theme-border-subtle: #e5e5e5,
 );
@@ -32,6 +34,7 @@ $theme-map-dark: (
   $--theme-gray-primary: #474b4f,
   $--theme-gray-secondary: #1f2833,
   $--theme-background-subtle: #f9f9f9,
+  $--theme-background-primary-header: rgba(170, 119, 255, 0.5),
   $--theme-typography-default: #0b0c10,
   $--theme-border-subtle: #e5e5e5,
 );
