@@ -90,6 +90,20 @@ h1,
     font-size: toRem(28);
     line-height: toRem(36);
   }
+
+  &.page-title {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    @include respond-above(md) {
+      margin-top: 36px;
+    }
+    &--updated-at {
+      margin-bottom: 20px;
+      @include respond-above(md) {
+        margin-bottom: 48px;
+      }
+    }
+  }
 }
 
 h2,
@@ -159,6 +173,14 @@ a {
   display: inline-block;
   color: useThemeVariable($--theme-typography-default);
   transition: all 0.2s ease-out;
+
+  &.link-inline {
+    color: useThemeVariable($--theme-secondary);
+    font-family: useThemeVariable($--font-body);
+    &:hover {
+      color: useThemeVariable($--theme-primary);
+    }
+  }
 }
 
 .remote-text {
