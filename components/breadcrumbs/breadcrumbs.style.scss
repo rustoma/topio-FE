@@ -39,7 +39,7 @@
     font-family: useThemeVariable($--font-display);
 
     &--last {
-      color: useThemeVariable($--theme-primary);
+      color: useThemeVariable($--theme-secondary);
       text-overflow: ellipsis;
       white-space: nowrap;
       max-width: 165px;
