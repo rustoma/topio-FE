@@ -44,7 +44,7 @@
     font-weight: bold;
     font-size: toRem(28);
     line-height: toRem(35);
-    color: useThemeVariable($--theme-primary);
+    color: useThemeVariable($--theme-secondary);
     letter-spacing: toRem(3);
     @include respond-below(sm) {
       font-size: toRem(21);
@@ -54,7 +54,7 @@
 
   &__body {
     margin: 0 auto;
-    color: useThemeVariable($--theme-gray-primary);
+    color: #d2d2d2;
     line-height: 21px;
     max-width: 80%;
   }

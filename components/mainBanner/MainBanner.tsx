@@ -25,7 +25,7 @@ const MainBanner = (props: MainBannerProps) => {
       <Image
         priority={true}
         className="main-banner__image"
-        src="/main-banner.jpg"
+        src="/main-banner-shop.jpg"
         alt="Odkurzacz automatyczny na drewnianej podłodze."
         fill
         style={{ objectFit: "cover" }}
