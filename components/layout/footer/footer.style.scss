@@ -6,7 +6,7 @@
   margin-top: 150px;
   padding: 80px 0 0;
   color: white;
-  background: linear-gradient(180deg, #6b6e70 0%, #474b4f 100%);
+  background: linear-gradient(180deg, useThemeVariable($--theme-primary) 0%, useThemeVariable($--theme-secondary) 100%);
 
   @include respond-below(md) {
     margin-top: 80px;

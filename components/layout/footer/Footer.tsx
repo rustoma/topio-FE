@@ -26,7 +26,11 @@ export const Footer = () => {
           </div>
           <div className="main-footer__column">
             <p className="main-footer__paragraph">
-              Serwis topio.pl bazuje na ogólnodostępnych informacjach w internecie.
+              Zapewniamy usługi naszego serwisu dzięki wykorzystaniu ciasteczek (ang. cookies) oraz podobnych
+              technologii. Mają one za zadanie personalizować serwis według indywidualnych preferencji użytkowników,
+              dostarczać usług, gromadzić dane statystyczne oraz umożliwiać wyświetlanie reklam. Korzystając z naszego
+              serisu zgadzasz się, aby pliki cookies były zapisywane w pamięci Twojego urządzenia. Pełne informacje na
+              ten temat znajdziesz w naszej <Link href="/polityka-prywatnosci-i-cookies">Polityce prywatności.</Link>
             </p>
             <div className="main-footer__design-by">
               <p className="main-footer__design-by-label">
