@@ -13,6 +13,7 @@
     left: 0;
     width: 100%;
     z-index: 99;
+    background-color: useThemeVariable($--theme-background-primary-header);
 
     &::before {
       content: "";
