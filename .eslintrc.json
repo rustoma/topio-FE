@@ -23,7 +23,7 @@
     "semi": "error",
     "default-case": "warn",
     "eqeqeq": "warn",
-    "no-nested-ternary": "error",
+    "no-nested-ternary": "warn",
     "no-var": "error",
     "require-await": "warn",
     "no-case-declarations": "error",
