@@ -11,6 +11,7 @@ export interface Page {
   parent_page: number;
   features: any[];
   products: Product[];
-  CreatedAt: Date;
-  UpdatedAt: Date;
+  product_category: number;
+  created_at: Date;
+  updated_at: Date;
 }
