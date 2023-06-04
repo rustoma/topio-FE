@@ -1,0 +1,16 @@
+@import "styles/variables";
+@import "styles/media-queries";
+@import "styles/functions";
+
+.home {
+  &__section {
+    margin-top: 80px;
+    text-align: justify;
+
+    @include respond-below(md) {
+      margin-top: 50px;
+    }
+  }
+  &__entry-text {
+  }
+}
