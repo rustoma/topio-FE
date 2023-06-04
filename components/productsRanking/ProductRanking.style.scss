@@ -1,0 +1,189 @@
+@import "styles/mixins";
+@import "styles/variables";
+@import "styles/media-queries";
+@import "styles/functions";
+
+.product {
+  margin-top: 80px;
+  margin-bottom: 120px;
+
+  @include respond-below(xl) {
+    margin-top: 30px;
+    margin-bottom: 80px;
+  }
+  @include respond-below(sm) {
+    margin-bottom: 50px;
+  }
+
+  &__top-bar {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &__title-wrap {
+    position: relative;
+    width: calc(100% - 350px);
+    padding: 15px 25px;
+    background-color: useThemeVariable($--theme-primary);
+
+    @include respond-below(xl) {
+      width: 100%;
+    }
+    @include respond-below(sm) {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__position {
+    position: absolute;
+    min-width: 22px;
+    text-align: center;
+    color: useThemeVariable($--theme-typography-default);
+    top: 31px;
+    left: 39px;
+    display: inline-block;
+    font-weight: 500;
+    font-size: toRem(14);
+    line-height: toRem(19);
+
+    @include respond-below(sm) {
+      position: static;
+      width: 35px;
+      height: 35px;
+      border-radius: 3px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: white;
+      margin-right: 15px;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    color: white;
+    padding: 20px 0 20px 80px;
+    background-image: url("/medal.svg");
+    background-repeat: no-repeat;
+    background-position: 0 50%;
+    background-size: 50px;
+    font-size: toRem(26);
+    line-height: toRem(29);
+    text-transform: uppercase;
+    font-family: useThemeVariable($--font-display);
+    font-weight: 400;
+
+    @include respond-below(md) {
+      font-size: toRem(20);
+      padding: 20px 0 20px 70px;
+    }
+
+    @include respond-below(sm) {
+      width: calc(100% - 65px);
+      font-size: toRem(18);
+      line-height: toRem(24);
+      background: none;
+      padding: 0;
+    }
+  }
+
+  &__score-wrap {
+    width: 350px;
+    text-align: center;
+    padding: 10px 30px;
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    @include respond-below(xl) {
+      width: 100%;
+      padding: 0;
+      margin-top: 30px;
+    }
+  }
+
+  &__score-label {
+    width: 100%;
+    font-weight: 500;
+    font-size: toRem(24);
+    line-height: toRem(32);
+    margin: 0 0 12px;
+    @include respond-below(sm) {
+      font-size: toRem(21);
+      line-height: toRem(28);
+    }
+  }
+
+  &__score {
+    font-weight: 500;
+    font-size: toRem(24);
+    line-height: toRem(32);
+    @include respond-below(sm) {
+      font-size: toRem(21);
+      line-height: toRem(28);
+    }
+  }
+
+  &__score-value {
+    color: useThemeVariable($--theme-primary);
+  }
+
+  &__initial-text {
+    margin-top: 50px;
+    text-align: justify;
+    @include respond-below(xl) {
+      margin-top: 30px;
+    }
+  }
+
+  &__content-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 50px 0;
+    @include respond-below(lg) {
+      margin: 30px 0 0;
+    }
+  }
+
+  &__image-wrap {
+    width: 50%;
+    position: relative;
+    padding-right: 30px;
+    margin-top: 70px;
+    min-height: 550px;
+    @include respond-below(lg) {
+      margin-top: 0;
+      width: 100%;
+      padding-right: 0;
+      text-align: center;
+      min-height: 425px;
+    }
+    @include respond-below(sm) {
+      min-height: 350px;
+    }
+  }
+
+  &__content {
+    width: 50%;
+    padding-left: 50px;
+    text-align: justify;
+    @include respond-below(lg) {
+      width: 100%;
+      padding-left: 0;
+      margin-top: 20px;
+    }
+  }
+
+  &__alternative-title {
+    margin: 25px 0 15px;
+    font-weight: 300;
+    font-size: toRem(19);
+    font-family: useThemeVariable($--font-display);
+    text-transform: uppercase;
+    letter-spacing: toRem(1);
+  }
+}
