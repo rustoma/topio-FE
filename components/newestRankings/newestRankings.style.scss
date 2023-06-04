@@ -1,0 +1,54 @@
+@import "styles/variables";
+@import "styles/media-queries";
+@import "styles/functions";
+
+.newest-rankings {
+  margin-top: 60px;
+  padding: 25px 25px 60px;
+  background-color: useThemeVariable($--theme-background-subtle);
+
+  &__title {
+    text-align: center;
+  }
+
+  &__items {
+    margin-top: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 45px;
+
+    @include respond-below(md) {
+      gap: 30px;
+      margin-top: 50px;
+    }
+    @include respond-below(sm) {
+      gap: 16px;
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: calc(33.3333% - 30px);
+    text-align: center;
+    padding: 25px;
+    box-shadow: 2px 3px 15px rgba(0, 0, 0, 0.15);
+    font-family: useThemeVariable($--font-body);
+    transition: all 0.4s;
+    background-color: white;
+
+    &:hover {
+      background-color: useThemeVariable($--theme-primary);
+      color: white;
+    }
+
+    @include respond-below(md) {
+      width: calc(50% - 15px);
+      padding: 15px;
+    }
+    @include respond-below(sm) {
+      width: calc(50% - 8px);
+    }
+  }
+}
