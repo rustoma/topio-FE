@@ -1,7 +1,10 @@
-import axios from "axios";
-
 import { MenuLink } from "@/types/menu";
-export const getRankingsMenu = async () => {
-  const res = await axios.get<MenuLink[]>("http://localhost:8080/menu/rankings");
-  return res.data;
+export const getRankingsMenu = async (): Promise<MenuLink[]> => {
+  const res = await fetch(`${process.env.BACKEND_HOST}/menu/rankings`);
+
+  if (!res.ok) {
+    return [];
+  }
+
+  return res.json();
 };
