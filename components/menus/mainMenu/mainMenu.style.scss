@@ -1,0 +1,17 @@
+@import "styles/variables";
+@import "styles/media-queries";
+@import "styles/functions";
+
+.main-menu {
+  display: none;
+
+  @include respond-above(lg) {
+    display: block;
+  }
+
+  &__list {
+    display: flex;
+    padding: 0;
+    margin: 0;
+  }
+}

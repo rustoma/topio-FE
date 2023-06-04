@@ -1,0 +1,53 @@
+@import "styles/variables";
+@import "styles/media-queries";
+@import "styles/functions";
+
+.main-menu__dropdown {
+  display: none;
+  position: absolute;
+  left: auto;
+  top: 100%;
+  right: 0;
+  z-index: 10;
+  min-width: 200px;
+  padding: 0;
+  background-color: useThemeVariable($--theme-background-subtle);
+
+  &--visible {
+    display: block;
+  }
+
+  &--deep {
+    top: 0;
+    right: 100%;
+  }
+
+  &--flat-animation {
+    animation: 0.4s forwards mainMenuFirstLevel;
+  }
+  &--deep-animation {
+    animation: 0.4s forwards mainMenuNestedLevel;
+  }
+}
+
+@keyframes mainMenuFirstLevel {
+  0% {
+    top: 90%;
+    opacity: 0;
+  }
+  100% {
+    top: 100%;
+    opacity: 1;
+  }
+}
+
+@keyframes mainMenuNestedLevel {
+  0% {
+    right: 96%;
+    opacity: 0.9;
+  }
+  100% {
+    right: 100%;
+    opacity: 1;
+  }
+}
