@@ -1,0 +1,258 @@
+@import "styles/mixins";
+@import "styles/variables";
+@import "styles/media-queries";
+@import "styles/functions";
+
+.quick-comparison {
+  margin: 80px 0;
+  padding: 40px 50px 50px;
+  background-color: useThemeVariable($--theme-background-subtle);
+
+  @include respond-below(lg) {
+    padding: 50px 15px 50px;
+  }
+
+  @include respond-below(md) {
+    padding: 0;
+    background-color: white;
+    margin: 50px 0;
+  }
+
+  &__title {
+    margin: 0 0 15px 0;
+    text-align: center;
+    @include respond-below(sm) {
+      font-size: toRem(24);
+      line-height: toRem(32);
+    }
+  }
+
+  &__para {
+    margin: 0 0 40px;
+    text-align: center;
+  }
+
+  .product-comparison {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    background: white;
+    box-shadow: 2px 3px 15px rgba(0, 0, 0, 0.15);
+    margin-top: 30px;
+    padding: 15px 20px;
+    @include respond-below(md) {
+      padding: 15px 0;
+    }
+
+    &__image-wrapper {
+      position: relative;
+      width: 80px;
+      height: 100px;
+
+      @include respond-below(lg) {
+        padding: 0 5px;
+      }
+
+      @include respond-below(md) {
+        width: 60px;
+        padding: 0 5px 0 0;
+        margin-left: 5px;
+      }
+    }
+
+    &__title-wrap {
+      width: calc(46% - 80px);
+      padding: 0 10px 0 40px;
+
+      @include respond-below(lg) {
+        padding: 0 10px 0 20px;
+      }
+      @include respond-below(md) {
+        width: calc(55% - 60px - 5px);
+        padding: 0 5px 0 20px;
+      }
+    }
+
+    &__title {
+      margin: 5px 0 0;
+      font-size: toRem(16);
+      line-height: toRem(21);
+      font-weight: 300;
+
+      @include respond-below(md) {
+        font-size: toRem(14);
+        line-height: toRem(18);
+      }
+    }
+
+    &__title-label {
+      margin: 0;
+      font-weight: 600;
+      font-size: toRem(18);
+      line-height: toRem(24);
+
+      @include respond-below(xl) {
+        font-size: toRem(16);
+        line-height: toRem(21);
+      }
+      @include respond-below(md) {
+        font-size: toRem(14);
+        line-height: toRem(18);
+      }
+    }
+
+    &__score-wrapper {
+      position: relative;
+      text-align: center;
+      width: 18%;
+      padding: 0 10px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        width: 1px;
+        height: 100px;
+        transform: translateY(-50%);
+        background-color: #eaeaea;
+
+        @include respond-below(md) {
+          display: none;
+        }
+      }
+
+      &::before {
+        left: 0;
+      }
+
+      @include respond-below(lg) {
+        padding: 0 5px;
+      }
+
+      @include respond-below(md) {
+        width: 17%;
+      }
+
+      @include respond-below(sm) {
+        width: 22%;
+      }
+    }
+
+    &__score-label {
+      display: block;
+      font-size: toRem(16);
+      line-height: toRem(21);
+      font-weight: 300;
+
+      @include respond-below(xl) {
+        font-size: toRem(14);
+        line-height: toRem(18);
+      }
+    }
+
+    &__score {
+      font-weight: 500;
+      font-size: toRem(18);
+      line-height: toRem(21);
+      margin-top: 5px;
+
+      @include respond-below(xl) {
+        font-size: toRem(16);
+        line-height: toRem(21);
+      }
+
+      @include respond-below(sm) {
+        font-size: toRem(14);
+        line-height: toRem(18);
+      }
+    }
+
+    &__score-value {
+      color: useThemeVariable($--theme-primary);
+    }
+
+    &__review-wrapper {
+      position: relative;
+      text-align: center;
+      width: 18%;
+      padding: 0 10px;
+
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        width: 1px;
+        height: 100px;
+        transform: translateY(-50%);
+        background-color: #eaeaea;
+
+        @include respond-below(md) {
+          display: none;
+        }
+      }
+
+      &::before {
+        left: 0;
+      }
+
+      &::after {
+        right: 0;
+      }
+
+      @include respond-below(lg) {
+        padding: 0 5px;
+      }
+
+      @include respond-below(md) {
+        width: 18%;
+        text-align: right;
+      }
+
+      @include respond-below(sm) {
+        width: 23%;
+      }
+    }
+
+    &__review-button {
+      display: inline-block;
+      width: 105px;
+      text-align: center;
+      margin: 5px;
+      padding: 5px 20px 2px;
+      font-size: toRem(14);
+      line-height: toRem(20);
+      font-family: useThemeVariable($--font-display);
+      text-transform: uppercase;
+      border-radius: 3px;
+      border: none;
+      cursor: pointer;
+      outline: none;
+      transition: all 0.2s ease-out;
+      background-color: useThemeVariable($--theme-primary);
+      color: white;
+
+      &:hover {
+        background-color: useThemeVariable($--theme-secondary);
+      }
+      @include respond-below(xl) {
+        padding: 5px 10px 2px;
+      }
+
+      @include respond-below(lg) {
+        width: 80px;
+      }
+
+      @include respond-below(md) {
+        width: 70px;
+        font-size: toRem(13);
+        line-height: toRem(18);
+      }
+
+      @include respond-below(sm) {
+        width: 50px;
+        padding: 5px 5px 2px;
+      }
+    }
+  }
+}

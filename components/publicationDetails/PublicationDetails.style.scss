@@ -1,0 +1,43 @@
+@import "styles/mixins";
+@import "styles/variables";
+@import "styles/media-queries";
+@import "styles/functions";
+
+.publication_details {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  &__author {
+    margin: 0;
+    padding-left: 16px;
+    background-image: url("/man-avatar.svg");
+    background-size: 10px;
+    background-repeat: no-repeat;
+    background-position: 0 48%;
+    font-size: toRem(12);
+    display: inline-block;
+  }
+
+  &__divider {
+    display: inline-block;
+    width: 1px;
+    height: 12px;
+    background-color: #1f2833;
+    margin: 0 10px;
+    @include respond-below(sm) {
+      margin: 0 8px;
+    }
+  }
+
+  &__date {
+    margin: 0;
+    padding-left: 1.6rem;
+    background-image: url("/calendar.svg");
+    background-size: 1rem;
+    background-repeat: no-repeat;
+    background-position: 0 45%;
+    font-size: 12px;
+    display: inline-block;
+  }
+}
