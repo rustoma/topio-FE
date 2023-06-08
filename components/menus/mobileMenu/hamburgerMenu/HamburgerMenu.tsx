@@ -1,5 +1,7 @@
-import React, { useState } from "react";
+"use client";
+import React, { useEffect, useState } from "react";
 import clsx from "clsx";
+import { usePathname } from "next/navigation";
 
 import { HamburgerButton } from "@/components/menus/mobileMenu/hamburgerButton/HamburgerButton";
 import { MobileMenu } from "@/components/menus/mobileMenu/MobileMenu";
@@ -12,7 +14,12 @@ interface HamburgerMenuProps {
 }
 
 export const HamburgerMenu = ({ menuTree }: HamburgerMenuProps) => {
+  const path = usePathname();
   const [isOpen, setIsOpen] = useState(false);
+
+  useEffect(() => {
+    setIsOpen(false);
+  }, [path]);
 
   return (
     <div className={clsx("hamburger-menu", isOpen && "hamburger-menu--open")}>

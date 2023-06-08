@@ -9,7 +9,7 @@
   right: 10px;
   height: 0;
   width: 0;
-  transition: all 0.4s ease-out;
+  transition: all 0.3s ease-out;
 
   @include respond-above(lg) {
     display: none;
@@ -22,8 +22,6 @@
     width: 256px;
     background: useThemeVariable($--theme-background-subtle);
     overflow-y: auto;
-    transition: all 0.3s ease-out;
-    transition-delay: 0.5s;
   }
 
   &__navigation {

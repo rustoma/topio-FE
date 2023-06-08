@@ -16,7 +16,10 @@
   }
 
   &__link {
+    outline: none;
+    user-select: none;
     display: inline-block;
+    cursor: pointer;
     width: calc(100% - 40px);
     font-family: var(--theme-font-display);
 
@@ -40,8 +43,11 @@
   }
 
   &__link-icon {
+    width: 16px;
+    height: 16px;
     fill: currentColor;
     color: transparent;
+    cursor: pointer;
     stroke: useThemeVariable($--theme-typography-default);
   }
 }

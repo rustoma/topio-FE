@@ -31,7 +31,13 @@ export const MobileMenuItem = ({ children, menuItem, openMenu, isOpen }: MobileM
       ) : (
         <span
           className={clsx("mobile-menu__link", pathName === menuItem.url && "mobile-menu__link--active")}
-          tabIndex={0}>
+          tabIndex={0}
+          onClick={() =>
+            openMenu((prevState) => ({
+              ...prevState,
+              [menuItem.title]: !prevState[menuItem.title],
+            }))
+          }>
           {menuItem.title}
         </span>
       )}
