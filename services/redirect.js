@@ -1,6 +1,6 @@
 const getMEXRedirects = async () => {
   const res = await fetch(`${process.env.BACKEND_HOST}/redirects/mex`, {
-    referrer: process.env.FRONTEND_HOST,
+    referrer: process.env.NEXT_PUBLIC_FRONTEND_HOST,
     referrerPolicy: "origin",
   });
 

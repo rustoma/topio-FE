@@ -1,7 +1,7 @@
 import { MenuLink } from "@/types/menu";
 export const getRankingsMenu = async (): Promise<MenuLink[]> => {
   const res = await fetch(`${process.env.BACKEND_HOST}/menu/rankings`, {
-    referrer: process.env.FRONTEND_HOST,
+    referrer: process.env.NEXT_PUBLIC_FRONTEND_HOST,
     referrerPolicy: "origin",
   });
 
