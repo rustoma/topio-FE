@@ -17,20 +17,20 @@ $--theme-border-subtle: --theme-border-subtle;
 
 // Default theme
 $theme-map-light: (
-  $--theme-primary: #9a208c,
-  $--theme-secondary: #aa77ff,
+  $--theme-primary: #3f51b5,
+  $--theme-secondary: #293399,
   $--theme-gray-primary: #474b4f,
   $--theme-gray-secondary: #1f2833,
   $--theme-background-subtle: #f9f9f9,
-  $--theme-background-primary-header: rgba(170, 119, 255, 0.5),
+  $--theme-background-primary-header: rgba(63, 81, 181, 0.3),
   $--theme-typography-default: #0b0c10,
   $--theme-border-subtle: #e5e5e5,
 );
 
 // Dark theme
 $theme-map-dark: (
-  $--theme-primary: #86c232,
-  $--theme-secondary: #61892f,
+  $--theme-primary: #3f51b5,
+  $--theme-secondary: #293399,
   $--theme-gray-primary: #474b4f,
   $--theme-gray-secondary: #1f2833,
   $--theme-background-subtle: #f9f9f9,
