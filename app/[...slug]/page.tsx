@@ -22,7 +22,7 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
   const page = await getPageBySlug(slugString);
 
   return {
-    title: `${page.title} | topio.pl`,
+    title: `${page.title} | ${new Date().getFullYear()} topio.pl`,
     description: undefined,
     alternates: {
       canonical: `${process.env.FRONTEND_HOST}${page.slug}`,
@@ -46,7 +46,7 @@ export default async function NodePage({ params }: { params: Params }) {
       body={page.body}
       CreatedAt={page.created_at?.toString() ?? "2022-01-01"}
       UpdatedAt={page.updated_at?.toString() ?? "2022-01-01"}
-      vacuumCleaners={page.products ?? []}
+      products={page.products ?? []}
     />
   );
 }

@@ -56,6 +56,54 @@ export const Header = ({ menu }: HeaderProps) => {
                 ],
               },
               {
+                id: "Drukarki",
+                title: "Drukarki",
+                items: [
+                  {
+                    id: "Ranking drukarek",
+                    title: "Ranking drukarek",
+                    url: "/ranking-drukarek",
+                    items: [],
+                  },
+                  {
+                    id: "Ranking drukarek laserowych",
+                    title: "Ranking drukarek laserowych",
+                    url: "/ranking-drukarek-laserowych",
+                    items: [],
+                  },
+                  {
+                    id: "Ranking drukarek atramentowych",
+                    title: "Ranking drukarek atramentowych",
+                    url: "/ranking-drukarek-atramentowych",
+                    items: [],
+                  },
+                ],
+              },
+              {
+                id: "Żelazka",
+                title: "Żelazka",
+                items: [
+                  {
+                    id: "Ranking żelazek",
+                    title: "Ranking żelazek",
+                    url: "/ranking-zelazek",
+                    items: [],
+                  },
+                  {
+                    id: "Ranking żelazek parowych",
+                    title: "Ranking żelazek parowych",
+                    url: "/ranking-zelazek-parowych",
+                    items: [],
+                  },
+                  {
+                    id: "Ranking żelazek do 300 zł",
+                    title: "Ranking żelazek do 300 zł",
+                    url: "/ranking-zelazek-do-300-zl",
+                    items: [],
+                  },
+                ],
+              },
+              {
                 id: "Zmywarki",
                 title: "Zmywarki",
                 items: [

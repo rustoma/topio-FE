@@ -17,7 +17,7 @@ interface RankPageProps {
   body: string;
   CreatedAt: string;
   UpdatedAt: string;
-  vacuumCleaners?: Product[];
+  products?: Product[];
   comparisonTitle?: string;
   comparisonSubTitle?: string;
   rankingTitle?: string;
@@ -31,7 +31,7 @@ const RankPage = ({
   comparisonTitle,
   comparisonSubTitle,
   rankingTitle,
-  vacuumCleaners = [],
+  products = [],
 }: RankPageProps) => {
   const { elRefs, executeScroll, setRefs } = useScroll();
 
@@ -50,13 +50,13 @@ const RankPage = ({
             <QuickComparison
               title={comparisonTitle}
               subTitle={comparisonSubTitle}
-              products={vacuumCleaners}
+              products={products}
               elRefs={elRefs}
               setRefs={setRefs}
               executeScroll={executeScroll}
             />
 
-            <ProductsRanking title={rankingTitle} products={vacuumCleaners} elRefs={elRefs} />
+            <ProductsRanking title={rankingTitle} products={products} elRefs={elRefs} />
 
             <div className="mt-12 text-justify md:mt-[120px]">
               <div className="remote-text">

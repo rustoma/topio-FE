@@ -27,7 +27,7 @@ export const ProductsRanking = ({ title, products, elRefs }: ProductsRankingProp
               </div>
 
               <div className="product__score-wrap">
-                <p className="product__score-label">Ocena naszego eksperta:</p>
+                <p className="product__score-label">Nasza ocena:</p>
                 <div className="product__score">
                   <span className="product__score-value">{product.score.toFixed(1)}</span>
                   <span> / 10</span>
