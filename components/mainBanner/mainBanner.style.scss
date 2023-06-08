@@ -19,9 +19,9 @@
   }
 
   &__content {
-    max-width: 600px;
+    max-width: 700px;
     text-align: center;
-    margin-top: 60px;
+    margin: 60px auto;
   }
 
   &__title {
@@ -44,7 +44,7 @@
     font-weight: bold;
     font-size: toRem(28);
     line-height: toRem(35);
-    color: useThemeVariable($--theme-secondary);
+    color: #d2d2d2;
     letter-spacing: toRem(3);
     @include respond-below(sm) {
       font-size: toRem(21);
