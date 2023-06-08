@@ -38,6 +38,42 @@ export const Header = ({ menu }: HeaderProps) => {
           <MainMenu
             menuTree={[
               {
+                id: "Ekspresy do kawy",
+                title: "Ekspresy do kawy",
+                items: [
+                  {
+                    id: "Ranking ekspresów do kawy",
+                    title: "Ranking ekspresów do kawy",
+                    url: "/ranking-ekspresow-do-kawy",
+                    items: [],
+                  },
+                  {
+                    id: "Ranking ekspresów do kawy do 2000 zł",
+                    title: "Ranking ekspresów do kawy do 2000 zł",
+                    url: "/ranking-ekspresow-do-kawy-do-2000",
+                    items: [],
+                  },
+                ],
+              },
+              {
+                id: "Zmywarki",
+                title: "Zmywarki",
+                items: [
+                  {
+                    id: "Ranking zmywarek",
+                    title: "Ranking zmywarek",
+                    url: "/ranking-zmywarek",
+                    items: [],
+                  },
+                  {
+                    id: "Ranking zmywarek do zabudowy",
+                    title: "Ranking zmywarek do zabudowy",
+                    url: "/ranking-zmywarek-do-zabudowy",
+                    items: [],
+                  },
+                ],
+              },
+              {
                 id: "Wszystkie rankingi",
                 title: "Wszystkie rankingi",
                 items: menu,

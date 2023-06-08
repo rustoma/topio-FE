@@ -9,6 +9,8 @@
   padding: 21px 15px;
   text-transform: uppercase;
   color: white;
+  letter-spacing: 1px;
+  font-size: toRem(18);
 
   &:hover {
     background-color: useThemeVariable($--theme-primary);
@@ -22,11 +24,14 @@
   &--deep {
     border-bottom: 1px solid useThemeVariable($--theme-border-subtle);
     padding: 4px 16px;
-    font-size: toRem(16);
+    font-size: toRem(14);
     color: useThemeVariable($--theme-typography-default);
+    font-family: useThemeVariable($--font-body);
+    letter-spacing: 0;
   }
 
   &--active {
-    color: useThemeVariable($--theme-primary);
+    background-color: useThemeVariable($--theme-primary);
+    color: white;
   }
 }
