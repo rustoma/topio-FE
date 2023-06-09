@@ -61,25 +61,20 @@ const QuickComparison = ({ title, subTitle, products, elRefs, setRefs, executeSc
                 Recenzja
               </button>
             </div>
-            {/*{product.shopLinks && (*/}
-            {/*  <VacuumCleanerShopLinksWrap>*/}
-            {/*    {vacuumCleaner.shopLinks.map((shopLink, index) => {*/}
-            {/*      return (*/}
-            {/*        <VacuumCleanerLinkWrap key={shopLink.id} textAlignSm={textAlignSm[index]}>*/}
-            {/*          <Link href={shopLink.url} passHref>*/}
-            {/*            <VacuumCleanerShopLink*/}
-            {/*              rel="noopener nofollow"*/}
-            {/*              target="_blank"*/}
-            {/*              backgroundColor={shopLink.shop_link_type.color}*/}
-            {/*              color={shopLink.shop_link_type.textColor}>*/}
-            {/*              {shopLink.shop_link_type.title}*/}
-            {/*            </VacuumCleanerShopLink>*/}
-            {/*          </Link>*/}
-            {/*        </VacuumCleanerLinkWrap>*/}
-            {/*      );*/}
-            {/*    })}*/}
-            {/*  </VacuumCleanerShopLinksWrap>*/}
-            {/*)}*/}
+
+            <div className="product-comparison__links-wrapper">
+              <div className="product-comparison__link-wrapper">
+                {product.friendly_url_media_expert && (
+                  <a
+                    href={product.friendly_url_media_expert}
+                    className="product-comparison__link product-comparison__link--mex"
+                    rel="noopener nofollow noreferrer"
+                    target="_blank">
+                    Media Expert
+                  </a>
+                )}
+              </div>
+            </div>
           </div>
         );
       })}

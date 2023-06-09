@@ -4,6 +4,7 @@ export interface Product {
   simplified_name: string;
   description: string;
   url: string;
+  friendly_url_media_expert: string;
   orderWeight: number;
   score: number;
   main_image: string;

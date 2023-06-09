@@ -73,26 +73,19 @@ export const ProductsRanking = ({ title, products, elRefs }: ProductsRankingProp
             {/*    </VacuumCleanerList>*/}
             {/*  </VacuumCleanerCons>*/}
             {/*</VacuumCleanerProsConsWrap>*/}
-            {/*{vacuumCleaner.shopLinks && vacuumCleaner.shopLinks.length > 0 && (*/}
-            {/*  <VacuumCleanerShopsWrap>*/}
-            {/*    <VacuumCleanerShopTitle>Sprawdź ceny w sklepach</VacuumCleanerShopTitle>*/}
-            {/*    <FlexWrapper justifyContent="center" wrap="wrap">*/}
-            {/*      {vacuumCleaner.shopLinks.map((shopLink, index) => {*/}
-            {/*        return (*/}
-            {/*          <Link key={shopLink.id} href={shopLink.url} passHref>*/}
-            {/*            <VacuumCleanerShopLink*/}
-            {/*              rel="noopener nofollow"*/}
-            {/*              target="_blank"*/}
-            {/*              backgroundColor={shopLink.shop_link_type.color}*/}
-            {/*              color={shopLink.shop_link_type.textColor}>*/}
-            {/*              Sprawdź Cenę w {shopLink.shop_link_type.title}*/}
-            {/*            </VacuumCleanerShopLink>*/}
-            {/*          </Link>*/}
-            {/*        );*/}
-            {/*      })}*/}
-            {/*    </FlexWrapper>*/}
-            {/*  </VacuumCleanerShopsWrap>*/}
-            {/*)}*/}
+
+            <div className="product__shops-wrapper">
+              <h4 className="product__shop-title">Sprawdź ceny w sklepach</h4>
+              <div className="product__shop-links">
+                <a
+                  href={product.friendly_url_media_expert}
+                  className="product__shop-link product__shop-link--mex"
+                  target="_blank"
+                  rel="noopener nofollow noreferrer">
+                  Sprawdź cenę w Media Expert
+                </a>
+              </div>
+            </div>
           </div>
         );
       })}

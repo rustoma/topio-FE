@@ -234,6 +234,8 @@
 
       &:hover {
         background-color: useThemeVariable($--theme-secondary);
+        transform: translateY(-2px);
+        box-shadow: 0 16px 32px rgba(180, 180, 180, 0.4);
       }
       @include respond-below(xl) {
         padding: 5px 10px 2px;
@@ -252,6 +254,67 @@
       @include respond-below(sm) {
         width: 50px;
         padding: 5px 5px 2px;
+      }
+    }
+
+    &__links-wrapper {
+      width: 18%;
+      padding: 0 10px;
+
+      @include respond-below(lg) {
+        padding: 0 5px;
+      }
+
+      @include respond-below(md) {
+        width: 100%;
+        display: flex;
+        margin-top: 10px;
+      }
+    }
+
+    &__link-wrapper {
+      text-align: center;
+
+      @include respond-below(md) {
+        width: 33.33%;
+      }
+    }
+
+    &__link {
+      display: inline-block;
+      width: 105px;
+      text-align: center;
+      margin: 5px;
+      padding: 5px 10px 2px;
+      font-size: 14px;
+      line-height: 20px;
+      font-family: useThemeVariable($--font-display);
+      text-transform: uppercase;
+      border-radius: 3px;
+      border: none;
+      cursor: pointer;
+      outline: none;
+      transition: all 0.2s ease-out;
+
+      @include respond-below(lg) {
+        width: 81px;
+      }
+
+      @include respond-below(md) {
+        width: 85px;
+        font-size: 13px;
+        line-height: 18px;
+      }
+
+      &--mex {
+        background-color: #fff200;
+        color: #333333;
+
+        &:hover {
+          background-color: #fff765;
+          transform: translateY(-2px);
+          box-shadow: 0 16px 32px rgba(180, 180, 180, 0.4);
+        }
       }
     }
   }
