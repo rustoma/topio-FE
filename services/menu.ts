@@ -1,6 +1,10 @@
 import { MenuLink } from "@/types/menu";
 export const getRankingsMenu = async (): Promise<MenuLink[]> => {
-  const res = await fetch(`${process.env.BACKEND_HOST}/menu/rankings`);
+  const res = await fetch(`${process.env.BACKEND_HOST}/menu/rankings`, {
+    headers: {
+      "x-api-key": `Bearer ${process.env.API_KEY}`,
+    },
+  });
 
   if (!res.ok) {
     return [];
