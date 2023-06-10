@@ -74,18 +74,18 @@ export const ProductsRanking = ({ title, products, elRefs }: ProductsRankingProp
             {/*  </VacuumCleanerCons>*/}
             {/*</VacuumCleanerProsConsWrap>*/}
 
-            <div className="product__shops-wrapper">
-              <h4 className="product__shop-title">Sprawdź ceny w sklepach</h4>
-              <div className="product__shop-links">
-                <a
-                  href={product.friendly_url_media_expert}
-                  className="product__shop-link product__shop-link--mex"
-                  target="_blank"
-                  rel="noopener nofollow noreferrer">
-                  Sprawdź cenę w Media Expert
-                </a>
-              </div>
-            </div>
+            {/*<div className="product__shops-wrapper">*/}
+            {/*  <h4 className="product__shop-title">Sprawdź ceny w sklepach</h4>*/}
+            {/*  <div className="product__shop-links">*/}
+            {/*    <a*/}
+            {/*      href={product.friendly_url_media_expert}*/}
+            {/*      className="product__shop-link product__shop-link--mex"*/}
+            {/*      target="_blank"*/}
+            {/*      rel="noopener nofollow noreferrer">*/}
+            {/*      Sprawdź cenę w Media Expert*/}
+            {/*    </a>*/}
+            {/*  </div>*/}
+            {/*</div>*/}
           </div>
         );
       })}
