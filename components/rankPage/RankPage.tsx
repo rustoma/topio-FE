@@ -7,11 +7,14 @@ import { Container } from "@/components/container/Container";
 import { ProductsRanking } from "@/components/productsRanking/ProductsRanking";
 import PublicationDetails from "@/components/publicationDetails/PublicationDetails";
 import QuickComparison from "@/components/quickComparison/QuickComparison";
+import RelatedPages from "@/components/relatedPages/RelatedPages";
 import { useScroll } from "@/hooks/useScroll";
+import { RelatedPages as RelatedPagesType } from "@/types/page";
 import { Product } from "@/types/product";
 
 interface RankPageProps {
   id: number;
+  relatedPages: RelatedPagesType[];
   title: string;
   intro: string;
   body: string;
@@ -24,6 +27,8 @@ interface RankPageProps {
 }
 
 const RankPage = ({
+  id,
+  relatedPages,
   title,
   intro,
   body,
@@ -46,6 +51,10 @@ const RankPage = ({
             <div className="remote-text">
               <ReactMarkdown>{intro}</ReactMarkdown>
             </div>
+
+            {relatedPages && relatedPages.length > 1 && (
+              <RelatedPages relatedPages={relatedPages} pageIdToExclude={id} />
+            )}
 
             <QuickComparison
               title={comparisonTitle}

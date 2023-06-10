@@ -15,3 +15,9 @@ export interface Page {
   created_at: Date;
   updated_at: Date;
 }
+
+export interface RelatedPages {
+  id: number;
+  title: string;
+  slug: string;
+}

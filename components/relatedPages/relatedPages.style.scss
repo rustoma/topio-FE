@@ -1,0 +1,100 @@
+@import "styles/variables";
+@import "styles/media-queries";
+@import "styles/functions";
+
+.related-pages {
+  margin: 70px 0 15px;
+  text-align: left;
+  background-color: useThemeVariable($--theme-background-subtle);
+  box-shadow: 0 4px 16px rgba(34, 38, 41, 0.15);
+
+  @include respond-below(md) {
+    margin: 30px 0 15px;
+  }
+
+  &__title {
+    font-weight: bold;
+    padding: 8px 30px;
+    color: white;
+    background-color: useThemeVariable($--theme-primary);
+
+    @include respond-below(md) {
+      padding: 12px 15px;
+    }
+  }
+
+  &__group {
+    display: flex;
+
+    &:nth-child(odd) {
+      .quick-nav__group-title {
+        color: white;
+        background-color: useThemeVariable($--theme-secondary);
+      }
+    }
+    &:nth-child(even) {
+      .quick-nav__group-title {
+        color: white;
+        background-color: useThemeVariable($--theme-primary);
+      }
+      .quick-nav__group-list {
+        border-top: 1px solid useThemeVariable($--theme-border-subtle);
+        border-bottom: 1px solid useThemeVariable($--theme-border-subtle);
+      }
+    }
+
+    @include respond-below(md) {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__group-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 30px;
+    margin: 0;
+    padding: 15px 30px;
+    @include respond-below(lg) {
+      gap: 16px;
+    }
+    @include respond-below(md) {
+      padding: 12px 15px;
+      gap: 12px;
+    }
+  }
+
+  &__group-list-item {
+    position: relative;
+    list-style: none;
+
+    &:not(:last-child)::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: -15px;
+      height: 100%;
+      width: 1px;
+      background-color: useThemeVariable($--theme-border-subtle);
+
+      @include respond-below(lg) {
+        right: -8px;
+      }
+
+      @include respond-below(md) {
+        display: none;
+      }
+    }
+    @include respond-below(md) {
+      width: 100%;
+    }
+  }
+
+  &__group-list-item-link {
+    font-family: useThemeVariable($--font-body);
+    line-height: toRem(20);
+    &:hover {
+      color: useThemeVariable($--theme-primary);
+    }
+  }
+}

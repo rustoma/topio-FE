@@ -129,16 +129,7 @@ export const Header = ({ menu }: HeaderProps) => {
               ...MENU_TREE,
             ]}
           />
-          <HamburgerMenu
-            menuTree={[
-              {
-                id: "Wszystkie rankingi",
-                title: "Wszystkie rankingi",
-                items: menu,
-              },
-              ...MENU_TREE,
-            ]}
-          />
+          <HamburgerMenu menuTree={[...menu, ...MENU_TREE]} />
         </div>
       </Container>
     </header>

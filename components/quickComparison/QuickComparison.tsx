@@ -70,7 +70,7 @@ const QuickComparison = ({ title, subTitle, products, elRefs, setRefs, executeSc
                     className="product-comparison__link product-comparison__link--mex"
                     rel="noopener nofollow noreferrer"
                     target="_blank">
-                    Media Expert
+                    Sprawdź cenę
                   </a>
                 )}
               </div>
