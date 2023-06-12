@@ -11,27 +11,7 @@ export async function middleware(request: NextRequest) {
     if (redirect.source === url.pathname) {
       url.href = redirect.destination;
 
-      const params = new URLSearchParams(url.searchParams); // Extract search parameters
-
-      // @ts-ignore
-      const sortedParams = [...params.entries()].sort(([keyA], [keyB]) => {
-        if (keyA === "p") {
-          return -1;
-        } else if (keyB === "p") {
-          return 1;
-        } else {
-          return 0;
-        }
-      });
-
-      const sortedSearchParams = new URLSearchParams(sortedParams);
-
-      url.search = "?" + sortedSearchParams.toString();
-      url.searchParams.sort();
-      console.log(url.search);
-      console.log(url.searchParams);
-
-      return NextResponse.redirect(url);
+      return NextResponse.redirect(new URL(redirect.destination, request.url));
     }
   }
 
