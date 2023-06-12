@@ -6,6 +6,7 @@ import { Container } from "@/components/container/Container";
 
 export const metadata = {
   title: "Polityka prywatności - topio.pl",
+  robots: "nofollow, noindex",
 };
 const PrivacyAndCookiesPolicy = () => {
   return (

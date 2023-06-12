@@ -1,10 +1,12 @@
 import React from "react";
+import { Metadata } from "next";
 
 import { Breadcrumbs } from "@/components/breadcrumbs/Breadcrumbs";
 import { Container } from "@/components/container/Container";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Cookies - topio.pl",
+  robots: "nofollow, noindex",
 };
 const Cookies = () => {
   return (

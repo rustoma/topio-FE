@@ -5,6 +5,7 @@ import { Container } from "@/components/container/Container";
 
 export const metadata = {
   title: "Regulamin - topio.pl",
+  robots: "nofollow, noindex",
 };
 const Regulations = () => {
   return (
