@@ -1,4 +1,4 @@
-export const getMEXRedirects = async () => {
+const getMEXRedirects = async () => {
   const res = await fetch(`${process.env.BACKEND_HOST}/api/v1/redirects/mex`, {
     cache: "no-store",
     headers: {
@@ -11,4 +11,8 @@ export const getMEXRedirects = async () => {
   }
 
   return res.json();
+};
+
+module.exports = {
+  getMEXRedirects: getMEXRedirects,
 };
