@@ -1,6 +1,6 @@
 import type { NextRequest } from "next/server";
 import { NextResponse } from "next/server";
-import { format,parse } from "url";
+import { format, parse } from "url";
 
 import { getMEXRedirects } from "@/services/redirect";
 
@@ -24,6 +24,10 @@ export async function middleware(request: NextRequest) {
 
       // Create a new URL with the sorted query string
       const finalUrl = new URL(redirectUrl.origin + redirectUrl.pathname + queryString);
+
+      console.log("finalUrl", finalUrl.href);
+      console.log("finalUrl search", finalUrl.search);
+      console.log("finalUrl searchParams", finalUrl.searchParams);
 
       return NextResponse.redirect(finalUrl);
 
