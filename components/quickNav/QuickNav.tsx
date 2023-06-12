@@ -1,12 +1,12 @@
 import React from "react";
 import Link from "next/link";
 
-import { getpageByCategories } from "@/services/page";
+import { getPageByCategories } from "@/services/page";
 
 import "./quickNav.style.scss";
 
 const QuickNav = async () => {
-  const categories = await getpageByCategories();
+  const categories = await getPageByCategories();
 
   return (
     <div className="quick-nav">
