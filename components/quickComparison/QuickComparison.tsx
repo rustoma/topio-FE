@@ -66,7 +66,7 @@ const QuickComparison = ({ title, subTitle, products, elRefs, setRefs, executeSc
               <div className="product-comparison__link-wrapper">
                 {product.friendly_url_media_expert && (
                   <a
-                    href={product.friendly_url_media_expert + "?a=3316548&p=237638"}
+                    href={product.friendly_url_media_expert}
                     className="product-comparison__link product-comparison__link--mex"
                     rel="noopener nofollow noreferrer"
                     target="_blank">
