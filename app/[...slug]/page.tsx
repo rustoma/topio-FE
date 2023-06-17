@@ -27,6 +27,9 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
     alternates: {
       canonical: `${process.env.FRONTEND_HOST}${page.slug}`,
     },
+    openGraph: {
+      images: "/topio-social.jpg",
+    },
   };
 }
 export default async function NodePage({ params }: { params: Params }) {

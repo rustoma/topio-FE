@@ -16,7 +16,9 @@ const PublicationDetails = (props: PublicationDetails) => {
       <div className="publication_details">
         <p className="publication_details__author">Autor: topio.pl</p>
         <span className="publication_details__divider" />
-        <span className="publication_details__date">Data publikacji: {lastUpdate.toISOString().split("T")[0]}</span>
+        <span className="publication_details__date">
+          Ostatnia aktualizacja: {lastUpdate.toISOString().split("T")[0]}
+        </span>
       </div>
     </div>
   );

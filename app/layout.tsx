@@ -28,6 +28,9 @@ const bebas = Bebas_Neue({
 
 export const metadata = {
   title: "Topio - najlepszy ranking produktów",
+  openGraph: {
+    images: "/topio-social.jpg",
+  },
 };
 
 const RootLayout = async ({ children }: { children: ReactNode }) => {
