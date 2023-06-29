@@ -5,7 +5,7 @@ export interface Product {
   description: string;
   url: string;
   friendly_url_media_expert: string;
-  orderWeight: number;
+  order_weight: number;
   score: number;
   main_image: string;
   page_id: number;
