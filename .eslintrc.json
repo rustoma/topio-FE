@@ -19,7 +19,6 @@
     "no-unused-expressions": "error",
     "no-console": "warn",
     "no-unused-vars": "off",
-    "camelcase": "error",
     "semi": "error",
     "default-case": "warn",
     "eqeqeq": "warn",
