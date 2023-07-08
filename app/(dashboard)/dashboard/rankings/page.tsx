@@ -2,14 +2,14 @@
 
 import React from "react";
 
-const Dashboard = () => {
+const Rankings = () => {
   return (
     <>
       <main>
-        <div>Content</div>
+        <div>Rankingi</div>
       </main>
     </>
   );
 };
 
-export default Dashboard;
+export default Rankings;

@@ -1,0 +1,14 @@
+@import "styles/variables";
+@import "styles/functions";
+
+.navigation__item {
+  width: 100%;
+  padding: 8px 16px;
+  color: #4b465c;
+
+  font-family: useThemeVariable($--font-body);
+
+  &:hover {
+    background-color: rgba(75, 70, 92, 0.04);
+  }
+}

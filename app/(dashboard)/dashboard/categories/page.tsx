@@ -2,14 +2,14 @@
 
 import React from "react";
 
-const Dashboard = () => {
+const Categories = () => {
   return (
     <>
       <main>
-        <div>Content</div>
+        <div>Categories</div>
       </main>
     </>
   );
 };
 
-export default Dashboard;
+export default Categories;

@@ -1,11 +1,7 @@
 import React, { ReactNode } from "react";
 
-export const metadata = {
-  title: "Dashboard - Topio",
-};
+import { DashboardLayout } from "@/features/dashboard/components/layout/DashboardLayout";
 
-const Layout = async ({ children }: { children: ReactNode }) => {
-  return <div>{children}</div>;
-};
+const Layout = ({ children }: { children: ReactNode }) => <DashboardLayout>{children}</DashboardLayout>;
 
 export default Layout;

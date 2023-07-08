@@ -2,14 +2,14 @@
 
 import React from "react";
 
-const Dashboard = () => {
+const Products = () => {
   return (
     <>
       <main>
-        <div>Content</div>
+        <div>Products</div>
       </main>
     </>
   );
 };
 
-export default Dashboard;
+export default Products;
