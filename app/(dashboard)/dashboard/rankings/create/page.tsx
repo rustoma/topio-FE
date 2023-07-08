@@ -16,7 +16,7 @@ const ClientProtected = () => {
       <main>
         <Breadcrumbs />
         <Container>
-          <h1 className="page-title">ClientProtected</h1>
+          <h1 className="page-title">Create Page</h1>
         </Container>
       </main>
     </>
