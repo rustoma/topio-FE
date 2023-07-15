@@ -1,0 +1,35 @@
+@import "features/dashboard/styles/variables";
+
+$dashboard-theme-map-light: (
+  $--dashboard-theme-heading-text: rgba(74, 70, 92, 0.9),
+  $--dashboard-theme-body-text: rgba(74, 70, 92, 0.8),
+  $--dashboard-theme-muted-text: rgba(74, 70, 92, 0.5),
+  $--dashboard-theme-placeholder-text: rgba(74, 70, 92, 0.4),
+  $--dashboard-theme-divider: #dbdade,
+  $--dashboard-theme-primary: #7367f0,
+  $--dashboard-theme-primary-hover: lighten(#7367f0, 3%),
+  $--dashboard-theme-secondary: #a8aaae,
+  $--dashboard-theme-secondary-hover: lighten(#a8aaae, 3%),
+  $--dashboard-theme-error: #ea5455,
+  $--dashboard-theme-shadow: 0px 2px 4px 0px rgba(165, 163, 174, 0.3),
+  $--dashboard-theme-shadow-card: 0px 4px 18px 0px rgba(75, 70, 92, 0.1),
+  $--dashboard-theme-radius-primary: 6px,
+  $--dashboard-theme-radius-secondary: 4px,
+);
+
+$dashboard-theme-map-dark: (
+  $--dashboard-theme-heading-text: rgba(74, 70, 92, 0.9),
+  $--dashboard-theme-body-text: rgba(74, 70, 92, 0.8),
+  $--dashboard-theme-muted-text: rgba(74, 70, 92, 0.5),
+  $--dashboard-theme-placeholder-text: rgba(74, 70, 92, 0.4),
+  $--dashboard-theme-divider: #dbdade,
+  $--dashboard-theme-primary: #7367f0,
+  $--dashboard-theme-primary-hover: lighten(#7367f0, 10%),
+  $--dashboard-theme-secondary: #a8aaae,
+  $--dashboard-theme-secondary-hover: lighten(#a8aaae, 3%),
+  $--dashboard-theme-error: #ea5455,
+  $--dashboard-theme-shadow: 0px 2px 4px 0px rgba(165, 163, 174, 0.3),
+  $--dashboard-theme-shadow-card: 0px 4px 18px 0px rgba(75, 70, 92, 0.1),
+  $--dashboard-theme-radius-primary: 6px,
+  $--dashboard-theme-radius-secondary: 4px,
+);
