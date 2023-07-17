@@ -14,10 +14,21 @@ export interface Page {
   product_category: number;
   created_at: Date;
   updated_at: Date;
+  is_published: boolean;
+  queue_upd: boolean;
 }
 
 export interface RelatedPages {
   id: number;
   title: string;
   slug: string;
+}
+
+export interface CreatePageRequest {
+  entry_data_url: string;
+  title: string;
+  product_name: string;
+  slug: string;
+  parent_page: number | null;
+  product_category: number;
 }
