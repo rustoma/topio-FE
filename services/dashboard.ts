@@ -1,5 +1,6 @@
 import { ApiClient } from "@/config/axios";
 import { DASHBOARD_API_ROUTES } from "@/features/dashboard/const/apiRoutes";
+import { ProductCategory } from "@/types/category";
 import { CreatePageRequest, Page } from "@/types/page";
 
 export const getAllRankings = (apiClient: ApiClient) => async (): Promise<Page[]> => {
@@ -38,3 +39,14 @@ export const createPage =
       throw error;
     }
   };
+
+export const getAllProductCategories = (apiClient: ApiClient) => async (): Promise<ProductCategory[]> => {
+  const { get } = apiClient;
+
+  try {
+    const res = await get(`/api/v1/dashboard/product-categories`);
+    return res.result;
+  } catch (error) {
+    throw error;
+  }
+};

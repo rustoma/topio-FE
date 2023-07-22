@@ -49,8 +49,6 @@ const authProviders = () => [
       password: { label: "Password", type: "password" },
     },
     async authorize(credentials) {
-      console.log({ credentials });
-
       const res = await fetch(`${process.env.BACKEND_HOST}/api/v1/login`, {
         cache: "no-store",
         method: "POST",

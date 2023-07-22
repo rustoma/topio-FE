@@ -32,6 +32,10 @@ a {
   box-sizing: border-box;
 }
 
+.full-width {
+  width: 100%;
+}
+
 :root.light {
   @include spread-map($theme-map-light);
 }
