@@ -1,0 +1,6 @@
+@import "features/dashboard/styles/variables";
+@import "styles/functions";
+
+.table__header {
+  border-bottom: 1px solid useThemeVariable($--dashboard-theme-divider);
+}

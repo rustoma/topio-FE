@@ -1,0 +1,9 @@
+@import "features/dashboard/styles/variables";
+@import "styles/functions";
+
+.table {
+  width: 100%;
+  background-color: white;
+  border-collapse: collapse;
+  border: solid 1px useThemeVariable($--dashboard-theme-divider);
+}
