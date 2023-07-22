@@ -163,7 +163,7 @@ const nextAuthOptions = () => ({
   },
 });
 
-const Auth = async function auth(req: NextApiRequest, res: NextApiResponse) {
+const Auth = async function auth(req: any, res: any) {
   return await NextAuth(req, res, nextAuthOptions());
 };
 
