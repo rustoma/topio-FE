@@ -1,7 +1,9 @@
 @import "features/dashboard/styles/variables";
+@import "styles/functions";
 
 .dashboard-header {
-  box-shadow: $shadow;
   padding: 12px 24px;
   background-color: white;
+  box-shadow: useThemeVariable($--dashboard-theme-shadow);
+  border-radius: useThemeVariable($--dashboard-theme-radius-primary);
 }
