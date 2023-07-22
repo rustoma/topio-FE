@@ -2,25 +2,16 @@
 
 import React from "react";
 
-import { Breadcrumbs } from "@/components/breadcrumbs/Breadcrumbs";
-import { Container } from "@/components/container/Container";
-import useAuth from "@/hooks/useAuth";
+import { CreateRankingForm } from "@/features/dashboard/forms/createRankingForm/CreateRankingForm";
 
-const ClientProtected = () => {
-  const isAuthenticated = useAuth(true);
-
-  if (!isAuthenticated) return <>Loading...</>;
-
+const CreateRanking = () => {
   return (
     <>
       <main>
-        <Breadcrumbs />
-        <Container>
-          <h1 className="page-title">Create Page</h1>
-        </Container>
+        <CreateRankingForm />
       </main>
     </>
   );
 };
 
-export default ClientProtected;
+export default CreateRanking;
