@@ -1,0 +1,76 @@
+@import "features/dashboard/styles/variables";
+@import "styles/functions";
+
+.btn {
+  border-radius: useThemeVariable($--dashboard-theme-radius-primary);
+  background-color: white;
+  border: none;
+  cursor: pointer;
+  transition: all 0.4s;
+
+  &--solid.btn--primary {
+    color: white;
+    background-color: useThemeVariable($--dashboard-theme-primary);
+    box-shadow: useThemeVariable($--dashboard-theme-shadow);
+
+    &:enabled:hover {
+      background-color: useThemeVariable($--dashboard-theme-primary-hover);
+    }
+  }
+
+  &--solid.btn--secondary {
+    color: white;
+    background-color: useThemeVariable($--dashboard-theme-secondary);
+    box-shadow: useThemeVariable($--dashboard-theme-shadow);
+
+    &:enabled:hover {
+      background-color: useThemeVariable($--dashboard-theme-secondary-hover);
+    }
+  }
+
+  &--outline.btn--primary {
+    color: useThemeVariable($--dashboard-theme-primary);
+    border: 1px solid useThemeVariable($--dashboard-theme-primary);
+
+    &:enabled:hover {
+      color: white;
+      background-color: useThemeVariable($--dashboard-theme-primary);
+    }
+  }
+
+  &--outline.btn--secondary {
+    color: useThemeVariable($--dashboard-theme-secondary);
+    border: 1px solid useThemeVariable($--dashboard-theme-secondary);
+
+    &:enabled:hover {
+      color: white;
+      background-color: useThemeVariable($--dashboard-theme-secondary);
+    }
+  }
+
+  &--sm {
+    font-size: toRem(14);
+    line-height: toRem(16);
+    padding: 4px 12px;
+  }
+  &--md {
+    font-size: toRem(16);
+    line-height: toRem(20);
+    padding: 8px 16px;
+  }
+  &--lg {
+    font-size: toRem(18);
+    line-height: toRem(22);
+    padding: 12px 20px;
+  }
+
+  &--fit {
+    width: 100%;
+  }
+
+  &:disabled,
+  &--loading {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+}

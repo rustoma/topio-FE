@@ -3,6 +3,7 @@ import React from "react";
 import clsx from "clsx";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useSession } from "next-auth/react";
 
 import { Container } from "@/components/container/Container";
 import { MainLogo } from "@/components/logos/MainLogo";
@@ -26,6 +27,7 @@ interface HeaderProps {
 }
 
 export const Header = ({ menu }: HeaderProps) => {
+  const { data: session } = useSession();
   const pathName = usePathname();
 
   return (
@@ -127,7 +129,18 @@ export const Header = ({ menu }: HeaderProps) => {
                 items: menu,
               },
               ...MENU_TREE,
-            ]}
+            ].concat(
+              session
+                ? [
+                    {
+                      id: "dashboard",
+                      title: "Panel admina",
+                      url: "/dashboard",
+                      items: [],
+                    },
+                  ]
+                : []
+            )}
           />
           <HamburgerMenu menuTree={[...menu, ...MENU_TREE]} />
         </div>

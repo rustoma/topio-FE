@@ -1,0 +1,22 @@
+.select {
+  position: relative;
+  display: inline-block;
+  min-width: 200px;
+
+  &__wrapper {
+    position: relative;
+  }
+
+  &__root {
+    text-align: left;
+    user-select: none;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    cursor: pointer;
+  }
+
+  &--hidden {
+    display: none;
+  }
+}

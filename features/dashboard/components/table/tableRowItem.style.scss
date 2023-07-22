@@ -1,0 +1,11 @@
+@import "features/dashboard/styles/variables";
+@import "styles/functions";
+
+.table__row-item {
+  padding: 8px 24px;
+  border-bottom: 1px solid useThemeVariable($--dashboard-theme-divider);
+
+  & > * + * {
+    margin-top: 8px;
+  }
+}

@@ -1,0 +1,27 @@
+@import "features/dashboard/styles/variables";
+@import "styles/functions";
+
+.dropdown {
+  position: absolute;
+  z-index: 100;
+  border: 1px solid useThemeVariable($--dashboard-theme-divider);
+  background-color: white;
+  border-radius: 4px;
+  width: -moz-max-content;
+  width: max-content;
+  max-width: 288px;
+  overflow-y: auto;
+  max-height: 365px;
+
+  padding: 0;
+  margin: 0;
+
+  &--close {
+    display: none;
+  }
+
+  &--fit {
+    width: 100%;
+    max-width: 100%;
+  }
+}
