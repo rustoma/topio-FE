@@ -1,0 +1,16 @@
+@import "styles/variables";
+@import "styles/media-queries";
+@import "styles/functions";
+
+.login-form__actions {
+  margin-top: 16px;
+  display: flex;
+  justify-content: flex-end;
+
+  .btn--solid.btn--primary {
+    background-color: useThemeVariable($--theme-primary);
+    &:hover {
+      background-color: useThemeVariable($--theme-secondary);
+    }
+  }
+}
