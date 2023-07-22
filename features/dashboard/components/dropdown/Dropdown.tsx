@@ -41,7 +41,6 @@ const Dropdown = <T extends ElementType = "div">({
   dropdownContainer,
   ...rest
 }: DropdownProps<T>) => {
-  console.log({ placement });
   const dropdownId = useId();
 
   const ref = useClickOutside({ callback: onClickOutside?.callback, exceptRef: onClickOutside?.exceptRef });

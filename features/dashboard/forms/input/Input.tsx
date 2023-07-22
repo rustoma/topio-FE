@@ -48,8 +48,6 @@ export const Input = React.forwardRef(
     { label, hint, pattern, fit, disabled, required, onChange, error = false, size = "md", ...rest }: InputProps,
     forwardedRef: React.ForwardedRef<HTMLInputElement>
   ) => {
-    console.log(size);
-
     const inputId = useId();
     const inputRef = useRef<HTMLInputElement | null>(null);
     const combinedRef = useForwardRef(forwardedRef, inputRef);

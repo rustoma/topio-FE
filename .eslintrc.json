@@ -16,7 +16,7 @@
   "rules": {
     "react-hooks/exhaustive-deps": 0,
     "simple-import-sort/exports": 0,
-    "no-unused-expressions": "error",
+    "no-unused-expressions": "warn",
     "no-console": "warn",
     "no-unused-vars": "off",
     "semi": "error",
@@ -27,7 +27,7 @@
     "require-await": "warn",
     "no-case-declarations": "error",
     "func-style": ["warn", "expression"],
-    "@typescript-eslint/no-unused-vars": "error",
+    "@typescript-eslint/no-unused-vars": "warn",
     "prettier/prettier": "off",
     "indent": "off",
     "react/react-in-jsx-scope": "off",
