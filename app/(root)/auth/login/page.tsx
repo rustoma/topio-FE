@@ -8,7 +8,14 @@ import { z } from "zod";
 
 import { Breadcrumbs } from "@/components/breadcrumbs/Breadcrumbs";
 import { Container } from "@/components/container/Container";
+import { Button } from "@/features/dashboard/components/button/Button";
+import { Card } from "@/features/dashboard/components/card/Card";
+import { FormRow } from "@/features/dashboard/forms/formRow/FormRow";
+import { Input } from "@/features/dashboard/forms/input/Input";
 import { VALIDATORS } from "@/utils/valiadtors";
+
+import "@/components/input/input.style.scss";
+import "./page.style.scss";
 
 const loginFormSchema = z.object({
   userName: VALIDATORS.email("Podaj porawny email"),
@@ -85,23 +92,39 @@ const ContactPage = () => {
           <h2>Zaloguj się</h2>
 
           <br />
-          <form onSubmit={handleSubmit(onSubmit)}>
-            <div>
-              <label htmlFor="userName">Nazwa użytkownika</label>
-              <div>
-                <input id="userName" {...register("userName")} />
-              </div>
-              {errors.userName?.message && <p>{errors.userName?.message?.toString()}</p>}
-            </div>
-            <div>
-              <label htmlFor="password">Hasło</label>
-              <div>
-                <input id="password" {...register("password")} />
-              </div>
-              {errors.password?.message && <p>{errors.password?.message?.toString()}</p>}
-            </div>
-            <input type="submit" />
-          </form>
+
+          <Card>
+            <Container>
+              <form onSubmit={handleSubmit(onSubmit)}>
+                <FormRow>
+                  <Input
+                    fit
+                    required
+                    {...register("userName")}
+                    label="Nazwa użytkownika"
+                    error={!!errors.userName?.message}
+                    hint={errors.userName?.message?.toString()}
+                  />
+                </FormRow>
+
+                <FormRow>
+                  <Input
+                    fit
+                    required
+                    {...register("password")}
+                    type="password"
+                    label="Hasło"
+                    error={!!errors.password?.message}
+                    hint={errors.password?.message?.toString()}
+                  />
+                </FormRow>
+
+                <div className="login-form__actions">
+                  <Button type="submit">Zaloguj</Button>
+                </div>
+              </form>
+            </Container>
+          </Card>
         </Container>
       </main>
     </>
