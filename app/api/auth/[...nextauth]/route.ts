@@ -11,6 +11,7 @@ async function refreshAccessToken(token: JWT): Promise<JWT> {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
+      "x-api-key": `Bearer ${process.env.API_KEY}`,
     },
     body: JSON.stringify({
       refresh_token: token.refresh_token,
@@ -55,6 +56,7 @@ const authProviders = () => [
         method: "POST",
         headers: {
           "Content-Type": "application/json",
+          "x-api-key": `Bearer ${process.env.API_KEY}`,
         },
         body: JSON.stringify({
           user_name: credentials?.user_name,
@@ -145,6 +147,7 @@ const nextAuthOptions = () => ({
         method: "POST",
         headers: {
           "Content-Type": "application/json",
+          "x-api-key": `Bearer ${process.env.API_KEY}`,
         },
         body: JSON.stringify({
           refresh_token: token.refresh_token,
@@ -156,7 +159,7 @@ const nextAuthOptions = () => ({
       }
     },
   },
-  secret: "your_secret",
+  secret: process.env.NEXTAUTH_SECRET,
   pages: {
     signIn: "/auth/login",
   },
