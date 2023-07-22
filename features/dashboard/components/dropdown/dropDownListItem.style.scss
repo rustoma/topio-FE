@@ -1,0 +1,32 @@
+@import "features/dashboard/styles/variables";
+@import "styles/functions";
+
+.dropdown {
+  &__list-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-width: 0;
+    cursor: pointer;
+    padding: 4px 12px;
+    user-select: none;
+
+    font-size: toRem(12);
+    line-height: toRem(21);
+
+    &--selected {
+      color: useThemeVariable($--dashboard-theme-primary);
+    }
+
+    &--highlighted {
+      background-color: useThemeVariable($--dashboard-theme-primary-hover);
+      color: #fff;
+    }
+
+    &--truncate {
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+  }
+}

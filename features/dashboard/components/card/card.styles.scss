@@ -1,0 +1,10 @@
+@import "features/dashboard/styles/variables";
+@import "styles/functions";
+
+.card {
+  margin-top: 24px;
+  padding: 24px 0;
+  background-color: white;
+  box-shadow: useThemeVariable($--dashboard-theme-shadow-card);
+  border-radius: useThemeVariable($--dashboard-theme-radius-primary);
+}
