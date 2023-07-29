@@ -1,0 +1,46 @@
+@import "features/dashboard/styles/variables";
+@import "styles/functions";
+@import "styles/variables";
+
+.checkbox {
+  &__root {
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    border-radius: useThemeVariable($--dashboard-theme-radius-primary);
+    border: 1px solid useThemeVariable($--dashboard-theme-divider);
+
+    &--disabled {
+      cursor: not-allowed;
+    }
+
+    &--readonly {
+      cursor: default;
+    }
+  }
+
+  &__icon {
+    height: 12px;
+    width: 12px;
+    fill: white;
+    max-width: 100%;
+    max-height: 100%;
+    overflow: hidden;
+    font-size: 12px;
+    line-height: 12px;
+    opacity: 0;
+    stroke: currentColor;
+
+    &--checked {
+      opacity: 100%;
+    }
+  }
+
+  &--hidden {
+    display: none;
+  }
+}

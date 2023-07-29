@@ -11,6 +11,7 @@ import { TableHeading } from "@/features/dashboard/components/table/TableHeading
 import { TableRow } from "@/features/dashboard/components/table/TableRow";
 import { TableRowItem } from "@/features/dashboard/components/table/TableRowItem";
 import { DASHBOARD_API_ROUTES } from "@/features/dashboard/const/apiRoutes";
+import Checkbox from "@/features/dashboard/forms/checkbox/Checkbox";
 import { useDashboardApiClient } from "@/features/dashboard/hooks/useDashboardApi";
 import { Page } from "@/types/page";
 
@@ -95,14 +96,34 @@ export const RankingsTable = ({ rankings }: RankingsTableProps) => {
           <TableHeader>
             <TableHeading>ID</TableHeading>
             <TableHeading>Title</TableHeading>
+            <TableHeading>Teksty</TableHeading>
+            <TableHeading>Produkty</TableHeading>
             <TableHeading>Edycja</TableHeading>
           </TableHeader>
         </thead>
         <tbody>
           {rankings.sort(sortByID).map((ranking) => (
             <TableRow key={ranking.id}>
-              <TableRowItem> {ranking.id}</TableRowItem>
-              <TableRowItem> {ranking.title}</TableRowItem>
+              <TableRowItem>{ranking.id}</TableRowItem>
+              <TableRowItem>{ranking.title}</TableRowItem>
+              <TableRowItem>
+                {
+                  <Checkbox
+                    readOnly
+                    name="products"
+                    checked={!!ranking.intro && !!ranking.body}
+                    onChange={() => undefined}
+                  />
+                }
+              </TableRowItem>
+              <TableRowItem>
+                <Checkbox
+                  readOnly
+                  checked={ranking.products && ranking.products.length > 0}
+                  name="products"
+                  onChange={() => undefined}
+                />
+              </TableRowItem>
 
               {ranking.queue_upd && !isError.includes(ranking.id) && (
                 <TableRowItem>
