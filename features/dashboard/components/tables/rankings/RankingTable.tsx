@@ -135,18 +135,32 @@ export const RankingsTable = ({ rankings }: RankingsTableProps) => {
 
               {!ranking.queue_upd && !isError.includes(ranking.id) && (
                 <TableRowItem>
-                  <div>
-                    <Button
-                      size="sm"
-                      onClick={() => generateTexts(apiClient, ranking.id)}
-                      loading={isLoading.includes(ranking.id)}>
-                      Regeneruj teksty na stronę
-                    </Button>
-                  </div>
+                  {ranking.body && ranking.intro ? (
+                    <div>
+                      <Button
+                        variant="outline"
+                        size="sm"
+                        onClick={() => generateTexts(apiClient, ranking.id)}
+                        loading={isLoading.includes(ranking.id)}>
+                        Regeneruj teksty
+                      </Button>
+                    </div>
+                  ) : (
+                    <div>
+                      <Button
+                        size="sm"
+                        onClick={() => generateTexts(apiClient, ranking.id)}
+                        loading={isLoading.includes(ranking.id)}>
+                        Generuj teksty
+                      </Button>
+                    </div>
+                  )}
 
                   {ranking.products && ranking.products.length > 0 ? (
                     <div>
-                      <Button size="sm">Aktualizuj produkty</Button>
+                      <Button size="sm" variant="outline">
+                        Aktualizuj produkty
+                      </Button>
                     </div>
                   ) : (
                     <div>
@@ -162,6 +176,8 @@ export const RankingsTable = ({ rankings }: RankingsTableProps) => {
                   <div>
                     <Button
                       size="sm"
+                      variant={ranking.is_published ? "outline" : "solid"}
+                      style={ranking.is_published ? "secondary" : "primary"}
                       onClick={() => togglePublic(apiClient, ranking.id, !ranking.is_published)}
                       loading={isLoading.includes(ranking.id)}>
                       {ranking.is_published ? "Przestań publikować" : "Publikuj"}
