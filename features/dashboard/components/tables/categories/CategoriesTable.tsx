@@ -8,6 +8,7 @@ import { TableHeader } from "@/features/dashboard/components/table/TableHeader";
 import { TableHeading } from "@/features/dashboard/components/table/TableHeading";
 import { TableRow } from "@/features/dashboard/components/table/TableRow";
 import { TableRowItem } from "@/features/dashboard/components/table/TableRowItem";
+import { PAGE_ROUTES } from "@/features/dashboard/const/pageRoutes";
 import { ProductCategory } from "@/types/category";
 
 import "./categoriesTable.style.scss";
@@ -18,10 +19,6 @@ interface CategoriesTableProps {
 export const CategoriesTable = ({ categories }: CategoriesTableProps) => {
   const sortByID = (a: ProductCategory, b: ProductCategory) => {
     return a.id - b.id;
-  };
-
-  const removeCategory = (id: number) => {
-    console.log("Category to remove: ", id);
   };
 
   return (
@@ -47,19 +44,11 @@ export const CategoriesTable = ({ categories }: CategoriesTableProps) => {
 
               <TableRowItem>
                 <div>
-                  <Button
-                    size="sm"
-                    onClick={() => {
-                      console.log("Edit");
-                    }}>
-                    Edytuj
-                  </Button>
-                </div>
-
-                <div>
-                  <Button size="sm" onClick={() => removeCategory(category.id)}>
-                    Usuń
-                  </Button>
+                  <Link passHref href={PAGE_ROUTES.categoryEdit(category.id)}>
+                    <Button element="a" size="sm">
+                      Edytuj
+                    </Button>
+                  </Link>
                 </div>
               </TableRowItem>
             </TableRow>

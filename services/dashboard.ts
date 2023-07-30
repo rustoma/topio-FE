@@ -27,6 +27,18 @@ export const createProductCategory =
     }
   };
 
+export const editProductCategory =
+  (apiClient: ApiClient) =>
+  async (productCategory: ProductCategory): Promise<number> => {
+    const { put } = apiClient;
+    try {
+      const res = await put(DASHBOARD_API_ROUTES.productCategories, productCategory);
+      return res.result;
+    } catch (error) {
+      throw error;
+    }
+  };
+
 export const createPage =
   (apiClient: ApiClient) =>
   async (data: CreatePageRequest): Promise<number> => {
@@ -50,3 +62,16 @@ export const getAllProductCategories = (apiClient: ApiClient) => async (): Promi
     throw error;
   }
 };
+
+export const getProductCategory =
+  (apiClient: ApiClient) =>
+  async (id: number): Promise<ProductCategory> => {
+    const { get } = apiClient;
+
+    try {
+      const res = await get(DASHBOARD_API_ROUTES.productCategory(id));
+      return res.result;
+    } catch (error) {
+      throw error;
+    }
+  };

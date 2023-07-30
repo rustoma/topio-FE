@@ -3,5 +3,6 @@ export const DASHBOARD_API_ROUTES = {
   publishRanking: (id: number) => `/api/v1/dashboard/pages/${id}/is-published`,
   products: "/api/v1/dashboard/products",
   productCategories: "/api/v1/dashboard/product-categories",
+  productCategory: (id: number) => `/api/v1/dashboard/product-categories/${id}`,
   regeneratePageTexts: (id: number) => `/api/v1/dashboard/pages/${id}/regenerate`,
 };
