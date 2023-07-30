@@ -24,17 +24,15 @@
   }
 
   &__icon {
-    height: 12px;
-    width: 12px;
-    fill: white;
+    height: 16px;
+    width: 16px;
     max-width: 100%;
     max-height: 100%;
     overflow: hidden;
     font-size: 12px;
     line-height: 12px;
     opacity: 0;
-    stroke: currentColor;
-
+    fill: useThemeVariable($--dashboard-theme-primary);
     &--checked {
       opacity: 100%;
     }

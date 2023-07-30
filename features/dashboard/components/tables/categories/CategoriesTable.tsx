@@ -25,7 +25,7 @@ export const CategoriesTable = ({ categories }: CategoriesTableProps) => {
     <Card>
       <div className="categories-table__actions">
         <Link passHref href="/dashboard/categories/create">
-          <Button element="a">Dodaj kategorię</Button>
+          <Button>Dodaj kategorię</Button>
         </Link>
       </div>
       <Table>
@@ -45,9 +45,7 @@ export const CategoriesTable = ({ categories }: CategoriesTableProps) => {
               <TableRowItem>
                 <div>
                   <Link passHref href={PAGE_ROUTES.categoryEdit(category.id)}>
-                    <Button element="a" size="sm">
-                      Edytuj
-                    </Button>
+                    <Button size="sm">Edytuj</Button>
                   </Link>
                 </div>
               </TableRowItem>

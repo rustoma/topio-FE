@@ -16,7 +16,6 @@ import { useDashboardApiClient } from "@/features/dashboard/hooks/useDashboardAp
 import { Page } from "@/types/page";
 
 import "./rankingTable.style.scss";
-import "./rankingTable.style.scss";
 
 interface RankingsTableProps {
   rankings: Page[];

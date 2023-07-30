@@ -1,7 +1,7 @@
-import React, { ChangeEventHandler, isValidElement,ReactElement } from "react";
+import React, { ChangeEventHandler, isValidElement, ReactElement } from "react";
 import clsx from "clsx";
 
-import { ChevronDown } from "@/components/icons/ChevronDown";
+import { Checkmark } from "@/components/icons/Checkmark";
 
 import "./checkbox.style.scss";
 interface CheckboxProps
@@ -33,7 +33,7 @@ const Checkbox = React.forwardRef<HTMLInputElement, CheckboxProps>(
             {...rest}
           />
 
-          <ChevronDown className={clsx("checkbox__icon", checked && "checkbox__icon--checked")} />
+          <Checkmark className={clsx("checkbox__icon", checked && "checkbox__icon--checked")} />
 
           {label && isValidElement(label) && <div className="input__hint">{label}</div>}
           {label && !isValidElement(label) && <p className="input__hint">{label}</p>}
