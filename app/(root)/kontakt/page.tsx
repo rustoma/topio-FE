@@ -17,8 +17,8 @@ const ContactPage = () => {
             <p>Masz pomysł, jak moglibyśmy udoskonalić nasz serwis ? A może chciałbyś nawiązać współpracę ?</p>
             <p>
               Zachęcamy do skontaktowania się z nami poprzez e-mail:{" "}
-              <a href="mailto:topio@gmail.com" className="link-inline">
-                topio@gmail.com
+              <a href="mailto:biuro.topio@gmail.com" className="link-inline">
+                biuro.topio@gmail.com
               </a>
             </p>
             Twój głos jest dla nas ważny, a Twoje uwagi pomagają nam stale doskonalić jakość naszego serwisu.
