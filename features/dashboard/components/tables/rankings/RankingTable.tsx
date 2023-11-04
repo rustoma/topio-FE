@@ -44,6 +44,25 @@ export const RankingsTable = ({ rankings }: RankingsTableProps) => {
     }
   };
 
+  const updateProducts = async (apiClient: ApiClient, pageId: number) => {
+    const { post } = apiClient;
+
+    try {
+      setIsError((prev) => prev.filter((e) => e !== pageId));
+      setIsLoading((prev) => [...prev, pageId]);
+
+      await post(DASHBOARD_API_ROUTES.updateProducts, {
+        page_id: pageId,
+        simplified_product_names: false,
+      });
+      await mutate(DASHBOARD_API_ROUTES.rankings);
+    } catch (error) {
+      setIsError((prev) => [...prev, pageId]);
+    } finally {
+      setIsLoading((prev) => prev.filter((e) => e !== pageId));
+    }
+  };
+
   const generateTexts = async (apiClient: ApiClient, relatedPageId: number) => {
     const { get } = apiClient;
 
@@ -157,7 +176,11 @@ export const RankingsTable = ({ rankings }: RankingsTableProps) => {
 
                   {ranking.products && ranking.products.length > 0 ? (
                     <div>
-                      <Button size="sm" variant="outline">
+                      <Button
+                        size="sm"
+                        variant="outline"
+                        onClick={() => updateProducts(apiClient, ranking.id)}
+                        loading={isLoading.includes(ranking.id)}>
                         Aktualizuj produkty
                       </Button>
                     </div>
